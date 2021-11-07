@@ -7,3 +7,5 @@ def rescale(frame, scale=0.75):
 cv.imshow('Daun Nangka', rescale(cv.imread('dataset/nangka/001.jpg')))
 cv.imshow('Daun Sirih',  rescale(cv.imread('dataset/sirih/001.jpg')))
 cv.waitKey(0)
+
+print(cv.imread('dataset/sirih/001.jpg'))
