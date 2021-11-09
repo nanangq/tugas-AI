@@ -14,7 +14,7 @@ files = []
 images = [cv.imread(file)for file in files]
 i = 1
 for img in images :
-    if (i <= 12):
+    if (i <= 2):
         print(img)#print image information as array
         print(img.shape)#show image resolution h x w
         imageCopy = img.copy()
@@ -24,7 +24,10 @@ for img in images :
 
         cv.imshow(str(i), rescale(img))
         # cv.imshow('nangka copy', rescale(editContrast))
+        
         cv.imshow(str(i) + 'copy', rescale(renderEdge))
+        im_name = "dataset/nangka_edge/" + str(i) + ".jpg"
+        cv.imwrite(im_name, renderEdge)
     else:
         break     
     # im_kon = cv.addWeighted(img,1.5,np.zeros(img.shape,img.dtype),0,-100)
